@@ -16,9 +16,14 @@ class PostManager{
   public function connect()
   {
     try {
+      $user = "fantagame";
+      $pass= "vefmufopve30";
+      $conn = new PDO('mysql:host=localhost;dbname=my_fantagame', $user, $pass);
+      /*
       $user = "root";
       $pass= "root";
       $conn = new PDO('mysql:host=localhost:8889;dbname=es_codice_php', $user, $pass);
+      */
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     } catch (PDOException $e) {
